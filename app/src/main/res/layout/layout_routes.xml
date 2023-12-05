@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/routeName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Route Name" />
+
+    <TextView
+        android:id="@+id/routeTemp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        app:layout_constraintEnd_toStartOf="@+id/weatherIcon"
+        app:layout_constraintStart_toEndOf="@+id/routeName"
+        app:layout_constraintTop_toTopOf="@+id/routeName"
+        tools:text="12°C" />
+
+    <TextView
+        android:id="@+id/weatherIcon"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        app:layout_constraintStart_toEndOf="@+id/routeTemp"
+        app:layout_constraintTop_toTopOf="@+id/routeName"
+        tools:text="☁️" />
+
+    <TextView
+        android:id="@+id/routeLengthTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/routeName"
+        app:layout_constraintTop_toBottomOf="@+id/routeName"
+        tools:text="2-2.5 Hours" />
+
+    <TextView
+        android:id="@+id/routeDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/routeLengthTime"
+        tools:text="Difficulty: 2/5" />
+
+    <TextView
+        android:id="@+id/routeLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/routeLengthTime"
+        app:layout_constraintTop_toBottomOf="@+id/routeTemp"
+        tools:text="11.5km" />
+
+    <ImageButton
+        android:id="@+id/favourite_route_button"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toEndOf="@+id/weatherIcon"
+        app:layout_constraintTop_toTopOf="@+id/routeName"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+</androidx.constraintlayout.widget.ConstraintLayout>

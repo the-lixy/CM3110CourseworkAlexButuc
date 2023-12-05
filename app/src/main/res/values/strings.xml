@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">HikingWeatherApp</string>
+
+    <string-array name="choose_shown_routes">
+        <item name="recommendedRoutes"> Recommended Routes </item>
+        <item name="recentRoutes"> Recent Routes </item>
+        <item name="allRoutes"> All Routes </item>
+    </string-array>
+
+    <!-- Settings Fragment -->
+    <string name="difficulty_settings">Difficulty Settings</string>
+    <string name="experience_level">Experience Level</string>
+    <string name="max_route_length">Max Route Length</string>
+    <string name="min_km">0km</string>
+    <string name="max_km">900km</string>
+    <string name="suggest_routes_as_far_away_as">Suggest Routes As Far Away As:</string>
+    <string name="wheelchair_accessible_routes_only">Wheelchair Accessible Routes Only</string>
+    <string name="app_settings">App Settings</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="dark_mode">Dark Mode</string>
+
+    <!-- Home Activity -->
+    <string name="settings">Settings</string>
+</resources>

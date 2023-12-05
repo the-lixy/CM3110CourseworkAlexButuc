@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settingsFragment">
+
+    <TextView
+        android:id="@+id/difficulty_settings_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/difficulty_settings"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/app_settings_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/app_settings"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wheelchair_checkbox" />
+
+    <TextView
+        android:id="@+id/experience_level_select_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:text="@string/experience_level"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficulty_settings_header" />
+
+    <TextView
+        android:id="@+id/max_route_length_select_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/max_route_length"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/experience_select" />
+
+    <Spinner
+        android:id="@+id/experience_select"
+        android:layout_width="367dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/experience_level_select_header" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/route_length_slider"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:valueFrom="0km"
+        android:valueTo="900km"
+        app:layout_constraintStart_toEndOf="@+id/min_km"
+        app:layout_constraintTop_toBottomOf="@+id/max_route_length_select_header" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/route_distance_from_me_slider"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:valueFrom="0km"
+        android:valueTo="900km"
+        app:layout_constraintStart_toEndOf="@+id/min_km2"
+        app:layout_constraintTop_toBottomOf="@+id/route_suggest_distance" />
+
+    <TextView
+        android:id="@+id/max_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/max_km"
+        app:layout_constraintStart_toEndOf="@+id/route_length_slider"
+        app:layout_constraintTop_toBottomOf="@+id/max_route_length_select_header" />
+
+    <TextView
+        android:id="@+id/max_km2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/max_km"
+        app:layout_constraintStart_toEndOf="@+id/route_distance_from_me_slider"
+        app:layout_constraintTop_toBottomOf="@+id/route_suggest_distance" />
+
+    <TextView
+        android:id="@+id/min_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/min_km"
+        app:layout_constraintEnd_toStartOf="@+id/route_length_slider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/max_route_length_select_header" />
+
+    <TextView
+        android:id="@+id/min_km2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/min_km"
+        app:layout_constraintEnd_toStartOf="@+id/route_distance_from_me_slider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/route_suggest_distance" />
+
+    <TextView
+        android:id="@+id/route_suggest_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/suggest_routes_as_far_away_as"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/route_length_slider" />
+
+    <CheckBox
+        android:id="@+id/wheelchair_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/wheelchair_accessible_routes_only"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/route_distance_from_me_slider" />
+
+    <Switch
+        android:id="@+id/contrast_mode_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="7dp"
+        android:switchTextAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:text="@string/light_mode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_settings_header" />
+
+    <TextView
+        android:id="@+id/dark_mode_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/dark_mode"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toEndOf="@+id/contrast_mode_switch"
+        app:layout_constraintTop_toBottomOf="@+id/app_settings_header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
